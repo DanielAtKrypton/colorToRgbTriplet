@@ -1,7 +1,7 @@
-function rgb = color(str)
+function rgb = color(str, varargin)
 %% color
-% Converts *color name* or *hexadecimal color code* to an *rgb* *triplet*.
-% 
+% Converts *color name* or *hexadecimal color code* to an *rgb* *triplet*. Optionally a second argument can be passed defining the desired *opacity* level within [0,1].
+%
 % An *rgb* *triplet* is a three-element row vector whose elements specify 
 % the intensities of the red, green, and blue components of the color. The intensities 
 % are in the range [0,1]; for example, [0.4 0.6 0.7]. 
@@ -17,6 +17,10 @@ function rgb = color(str)
 % |rgb = color(name)|
 % 
 % |rgb = color(hex)|
+% 
+% |rgb = color(name, opacity)|
+% 
+% |rgb = color(hex, opacity)|
 %
 %% Description
 % |color|  shows color picker.
@@ -24,28 +28,31 @@ function rgb = color(str)
 % |rgb = color(name)| converts color name to an rgb triplet.
 % 
 % |rgb = color(hex)| converts hexadecimal color code to an rgb triplet.
+% 
+% |rgb = color(name, opacity)| converts color name to an rgb triplet plus opacity.
+% 
+% |rgb = color(hex, opacity)| converts hexadecimal color code to an rgb triplet plus opacity.
 %
 %% Examples
 %%
 % figure('Color', color('ghost')); 
 % fplot(@(x) sin(x), 'Color', color('royal'), 'LineWidth', 7);
 % hold('on'); 
-% fplot(0, 'Color', color('fire'), 'LineWidth', 3, 'LineStyle', '--');
+% fplot(0, 'Color', color('fire', 0.2), 'LineWidth', 3, 'LineStyle', '--');
 % hold('off');
 % axis('off'); 
 % title('Sin(x)', 'Color', color('golden'), 'FontSize', 20);
 %
 %% References
 % <https://www.w3schools.com/colors/colors_names.asp https://www.w3schools.com/colors/colors_names.asp>
-% 
-%% Author
-% yasin.zamani@utah.edu
-%
 
 % color()
-if nargin < 1
+switch(nargin)
+case 0
     rgb = uisetcolor([0, 0, 0]);
     return
+case 2
+    transparency = varargin{1};
 end
 
 % color(str)
@@ -367,6 +374,9 @@ assert(~isempty(ind), 'Not a valid color name.');
 
 % hexadecimal color code to an rgb triplet
 rgb = hex2rgb(hex(ind));
+if (nargin == 2)
+    rgb = [rgb transparency];
+end
 end
 
 function rgb = hex2rgb(hex)

@@ -1,0 +1,1351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="generator" content="MATLAB R2018a"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><title>color</title><style type="text/css">
+* {margin: 0; padding: 0;}
+body {width:70%;margin:auto;text-align: start; line-height: 17.2339992523193px; min-height: 0px; white-space: normal; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-style: normal; font-size: 14px; font-weight: normal; text-decoration: none; white-space: normal; }
+h1, h2 {font-weight: normal;}
+.content { padding: 30px; }
+
+.S0 { margin-left: 0px; margin-top: 0px; margin-bottom: 0px; margin-right: 0px;  }
+.S1 { text-align: left; line-height: 26.3999996185303px; min-height: 24px; white-space: pre-wrap; color: rgb(213, 80, 0); font-family: Helvetica, Arial, sans-serif; font-size: 22px; white-space: pre-wrap; margin-left: 4px; margin-top: 3px; margin-bottom: 15px; margin-right: 10px;  }
+.S2 { min-height: 0px; margin-left: 0px; margin-top: 0px; margin-bottom: 0px; margin-right: 0px;  }
+.S3 { text-align: left; line-height: 21px; min-height: 17px; white-space: pre-wrap; font-family: Helvetica, Arial, sans-serif; white-space: pre-wrap; margin-left: 4px; margin-top: 2px; margin-bottom: 9px; margin-right: 10px;  }
+.S4 { font-weight: bold; margin-left: 0px; margin-top: 0px; margin-bottom: 0px; margin-right: 0px;  }
+.S5 { text-align: left; line-height: 20.576000213623px; min-height: 20px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; white-space: pre-wrap; margin-left: 4px; margin-top: 3px; margin-bottom: 9px; margin-right: 10px;  }
+.S6 { font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; margin-left: 0px; margin-top: 0px; margin-bottom: 0px; margin-right: 0px;  }
+.S7 { margin-left: 3px; margin-top: 10px; margin-bottom: 4px; margin-right: 3px;  }
+.S8 { min-height: 18px; white-space: nowrap; white-space: nowrap; margin-left: 0px; margin-top: 0px; margin-bottom: 0px; margin-right: 0px;  }
+.S9 { min-height: 0px; white-space: pre; white-space: pre; margin-left: 0px; margin-top: 0px; margin-bottom: 0px; margin-right: 0px;  }
+.S10 { color: rgb(160, 32, 240); margin-left: 0px; margin-top: 0px; margin-bottom: 0px; margin-right: 0px;  }
+.S11 { color: rgb(64, 64, 64); margin-left: 0px; margin-top: 0px; margin-bottom: 0px; margin-right: 0px;  }
+.S12 { min-height: 0px; color: rgb(0, 95, 206); margin-left: 0px; margin-top: 0px; margin-bottom: 0px; margin-right: 0px;  }
+.S13 { text-decoration: underline; margin-left: 0px; margin-top: 0px; margin-bottom: 0px; margin-right: 0px;  }
+
+.CodeBlock {margin: 10px 0 10px 0; background-color: #F7F7F7;}
+.CodeBlock+.paragraphNode {margin-top: 10px;}
+.lineNode {padding-left: 10px; border-left: 1px solid #E9E9E9; border-right: 1px solid #E9E9E9;}
+.inlineWrapper:first-child .lineNode,.inlineWrapper.outputs+.inlineWrapper .lineNode {padding-top: 5px; border-top: 1px solid #E9E9E9;}
+.inlineWrapper:last-child .lineNode,.inlineWrapper.outputs .lineNode {padding-bottom: 5px; border-bottom: 1px solid #E9E9E9;}
+.lineNode .textBox {white-space: pre;}
+.outputGroup {margin: 2px 0 2px 0; padding: 2px 2px 2px 4px;}
+.outputRegion {}
+.outputParagraph {color: rgba(64, 64, 64, 1); padding: 10px 0 6px 17px; background: white; overflow-x: hidden;}
+.inlineWrapper:last-child .outputParagraph {border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;}
+.outputParagraph:empty {margin: 0;}
+.inlineElement .symbolicElement {margin-top: 1px; margin-bottom: 1px;}
+.embeddedOutputsSymbolicElement .MathEquation {margin-top: 4px; margin-bottom: 4px;}
+.embeddedOutputsSymbolicElement .MathEquation.displaySymbolicElement {margin-left: 15px;}
+.embeddedOutputsSymbolicElement .MathEquation.inlineSymbolicElement {}
+.embeddedOutputsSymbolicElement {overflow-x: auto; overflow-y: auto;}
+.embeddedOutputsSymbolicElement { overflow: initial !important;}
+.embeddedOutputsSymbolicElement { width: 100% !important; }
+.embeddedOutputsTextElement,.embeddedOutputsVariableStringElement {white-space: pre; word-wrap: initial; min-height: 18px; max-height: 250px; overflow: auto;}
+.textElement,.rtcDataTipElement .textElement {padding-top: 3px;}
+.embeddedOutputsTextElement.inlineElement,.embeddedOutputsVariableStringElement.inlineElement {}
+.inlineElement .textElement {}
+.embeddedOutputsTextElement,.embeddedOutputsVariableStringElement { max-height: none !important; overflow: initial !important;}
+.veSpecifier {}
+.veContainer {}
+.veSpecifierBox {height: 400px; width: 500px;}
+.veSpecifier .veTable {padding-top: 3px; padding-bottom: 4px;}
+.veSpecifierBox .veSpecifier .veContainer {position: relative; width: 100%; height: 370px;}
+.veSpecifierBox .dijitDialogPaneContent {width: 97% !important; height: 88% !important;}
+.veSpecifier .veTable .rowHeadersWrapper {padding-bottom: 0;}
+.veSpecifier .veTable .scroller .variableEditorRenderers {padding-right: 3px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;}
+.veSpecifier .veTable .topHeaderWrapper,.veSpecifier .veTable .bottomRowHeaderWrapper {visibility: hidden; z-index: 0;}
+.veMetaSummary {font-style: italic;}
+.veSpecifier .veTable .scroller {overflow: hidden;}
+.veSpecifier .veTable:hover .scroller {overflow: auto;}
+.veSpecifier .veVariableName,.veSpecifier .veDimensionFont {font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px;}
+.veSpecifier .veVariableName {padding-top: 2px;}
+.veSpecifier .veDimensionFont {font-style: italic; color: #9A9A9A;}
+.veSpecifier .scroller::-webkit-scrollbar-track {background-color: white;}
+.veSpecifier .scroller::-webkit-scrollbar-corner {background-color: white;}
+.veSpecifier .veTable .topRowHeaderWrapper {border: none; background-color: #F8F9FA;}
+.veSpecifier .mw_type_ListBase.showCellBorders,.veSpecifier .veTable .topHeaderWrapper,.veSpecifier .veTable .bottomRowHeaderWrapper,.veSpecifier .veTable .verticalScrollSpacer,.veSpecifier .veTable .horizontalScrollSpacer {border: none;}
+.veSpecifier .veTable .dataScrollerNode {border: 1px solid #BFBFBF;}
+.veSpecifier .veTable .columnHeaderNode,.veSpecifier .veTable .rowHeaderNode,.veSpecifier .veTable .dataBody {font-family: Arial; font-size: 13px;}
+.veSpecifier .veTable .columnHeaderNode,.veSpecifier .veTable .rowHeaderNode {color: #7F7F7F;}
+.veSpecifier .veTable .dataBody {color: #000000;}
+.veSpecifier .veTable .columnHeaderNode .cell .drag,.veSpecifier .veTable .columnHeaderNode .cell .header,.veSpecifier .veTable .topHeaderWrapper,.veSpecifier .veTable .bottomRowHeaderWrapper {background-color: #F8F9FA;}
+.veSpecifier .veTable .columnHeaderNode .cell .dragBorder {border-right: 1px solid #F8F9FA;}
+.veSpecifier .veTable .rowHeaderNode .cell {padding-top: 3px; text-align: center; border-bottom: 1px solid #F8F9FA;}
+.veSpecifier .veTable .dataBody .cell .plainText {text-align: right;}
+.veSpecifier .veTable .dataBody .row .cell {border-bottom: 1px solid #E9E9E9; border-right: 1px solid #E9E9E9;}
+.embeddedOutputsVariableElement {white-space: pre-wrap; word-wrap: break-word; min-height: 18px; max-height: 250px; overflow: auto;}
+.variableElement {}
+.embeddedOutputsVariableElement.inlineElement {}
+.inlineElement .variableElement {}
+.variableNameElement {margin-bottom: 3px; display: inline-block;}
+.variableValue { width: 100% !important; }
+.embeddedOutputsMatrixElement,.eoOutputWrapper .matrixElement {min-height: 18px; box-sizing: border-box;}
+.embeddedOutputsMatrixElement .matrixElement,.eoOutputWrapper .matrixElement,.rtcDataTipElement .matrixElement {position: relative;}
+.matrixElement .variableValue,.rtcDataTipElement .matrixElement .variableValue {white-space: pre; display: inline-block; vertical-align: top; overflow: hidden;}
+.embeddedOutputsMatrixElement.inlineElement {}
+.embeddedOutputsMatrixElement.inlineElement .topHeaderWrapper {display: none;}
+.embeddedOutputsMatrixElement.inlineElement .veTable .body {padding-top: 0 !important; max-height: 100px;}
+.inlineElement .matrixElement {max-height: 300px;}
+.embeddedOutputsMatrixElement .matrixElement .valueContainer,.eoOutputWrapper .matrixElement .valueContainer,.rtcDataTipElement .matrixElement .valueContainer {white-space: nowrap; margin-bottom: 3px;}
+.embeddedOutputsMatrixElement .matrixElement .valueContainer .horizontalEllipsis.hide,.embeddedOutputsMatrixElement .matrixElement .verticalEllipsis.hide,.eoOutputWrapper .matrixElement .valueContainer .horizontalEllipsis.hide,.eoOutputWrapper .matrixElement .verticalEllipsis.hide,.rtcDataTipElement .matrixElement .valueContainer .horizontalEllipsis.hide,.rtcDataTipElement .matrixElement .verticalEllipsis.hide {display: none;}
+.embeddedOutputsVariableMatrixElement .matrixElement .valueContainer.hideEllipses .verticalEllipsis, .embeddedOutputsVariableMatrixElement .matrixElement .valueContainer.hideEllipses .horizontalEllipsis {display:none;}
+.embeddedOutputsMatrixElement .matrixElement .valueContainer .horizontalEllipsis,.eoOutputWrapper .matrixElement .valueContainer .horizontalEllipsis {margin-bottom: -3px;}
+.eoOutputWrapper .embeddedOutputsVariableMatrixElement .matrixElement .valueContainer {cursor: default !important;}
+.matrixElement { max-height: none !important; }
+.embeddedOutputsVariableTableElement .ClientViewDiv table tr {height: 22px; white-space: nowrap;}
+.embeddedOutputsVariableTableElement .ClientViewDiv table tr td,.embeddedOutputsVariableTableElement .ClientViewDiv table tr th {min-width : 75px; max-width : 75px; background-color:white; text-overflow: ellipsis; font-family: 'Arial', sans-serif; font-size: 12px; overflow : hidden;}
+.embeddedOutputsVariableTableElement .ClientViewDiv table tbody tr th {width: 34px; max-width: 100px;}
+.embeddedOutputsVariableTableElement .ClientViewDiv table tr span {text-overflow: ellipsis; padding: 3px;}
+.embeddedOutputsVariableTableElement .ClientViewDiv table tr th {color: rgba(0,0,0,0.5); padding: 3px; font-size: 9px;}
+.embeddedOutputsVariableTableElement .ClientViewDiv table tr th:first-child {min-width: 28px; max-width: 250px;}
+.dijitTooltipDialog .dijitTooltipContainer .dijitTooltipContents .alertPlugin-alertMessage {min-width: 12px; max-width: 400px; max-height: 300px; overflow: auto;}
+.dijitTooltipDialog .alertPlugin-alertMessage::-webkit-scrollbar {width: 11px; height: 11px;}
+.dijitTooltipDialog .alertPlugin-alertMessage::-webkit-scrollbar-track {background-color: rgba(0, 0, 0, 0);}
+.dijitTooltipDialog .alertPlugin-alertMessage::-webkit-scrollbar-corner {background-color: rgba(0, 0, 0, 0);}
+.dijitTooltipDialog .alertPlugin-alertMessage::-webkit-scrollbar-thumb {border-radius: 7px; background-color: rgba(0, 0, 0, 0.1); border: 2px solid rgba(0, 0, 0, 0); background-clip: padding-box;}
+.dijitTooltipDialog .alertPlugin-alertMessage::-webkit-scrollbar-thumb:hover {background-color: rgba(0, 0, 0, 0.2);}
+.dijitTooltipDialog .alertPlugin-alertMessage::-webkit-scrollbar-thumb {background-color: rgba(0, 0, 0, 0);}
+.dijitTooltipDialog .alertPlugin-alertMessage:hover::-webkit-scrollbar-thumb {background-color: rgba(0, 0, 0, 0.1);}
+.dijitTooltipDialog .alertPlugin-alertMessage:hover::-webkit-scrollbar-thumb:hover {background-color: rgba(0, 0, 0, 0.2);}
+.alertPlugin-alertLine {position: absolute; display: initial; width: 40px; text-align: right; cursor: text;}
+.alertPlugin-onTextLine {visibility: hidden;}
+.alertPlugin-hasTooltip .alertPlugin-warningImg,.alertPlugin-hasTooltip .alertPlugin-errorImg {cursor: pointer;}
+.alertPlugin-alertLine .alertPlugin-warningElement,.alertPlugin-alertLine .alertPlugin-errorElement {display: inline-block; margin-right: 4px;}
+.alertPlugin-isStale {-webkit-filter: opacity(0.4) grayscale(80%); filter: opacity(0.4) grayscale(80%);}
+.diagnosticMessage-wrapper {font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px;}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType {color: rgb(255,100,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType a {color: rgb(255,100,0); text-decoration: underline;}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType {color: rgb(230,0,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType a {color: rgb(230,0,0); text-decoration: underline;}
+.diagnosticMessage-wrapper .diagnosticMessage-messagePart {white-space: pre-wrap;}
+.diagnosticMessage-wrapper .diagnosticMessage-stackPart {white-space: pre;}
+.embeddedOutputsWarningElement{min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsWarningElement.inlineElement {}
+.embeddedOutputsErrorElement {min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsErrorElement.inlineElement {}
+.variableNameElement .headerElement {color: rgb(179, 179, 179); font-style: italic;}
+.variableNameElement .headerElement .headerDataType {color: rgb(147, 176, 230);}
+.matrixElement .horizontalEllipsis,.rtcDataTipElement .matrixElement .horizontalEllipsis {display: inline-block; margin-top: 3px; width: 30px; height: 12px; background-repeat: no-repeat; background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAJCAYAAADO1CeCAAAAJUlEQVR42mP4//8/A70xw0i29BUDFPxnAEtTW37wWDqakIa4pQDvOOG89lHX2gAAAABJRU5ErkJggg==");}
+.matrixElement .verticalEllipsis,.textElement .verticalEllipsis,.rtcDataTipElement .matrixElement .verticalEllipsis,.rtcDataTipElement .textElement .verticalEllipsis {margin-left: 35px; width: 12px; height: 30px; background-repeat: no-repeat; background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAZCAYAAAAIcL+IAAAALklEQVR42mP4//8/AzGYgWyFMECMwv8QddRS+P//KyimlmcGUOFoOI6GI/UVAgDnd8Dd4+NCwgAAAABJRU5ErkJggg==");}
+table.w3-table-all {
+    margin: 20px 0;
+}
+.w3-table-all {
+    border: 1px solid #ccc;
+}
+.w3-table, .w3-table-all {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+}
+.w3-table th:first-child, .w3-table td:first-child, .w3-table-all th:first-child, .w3-table-all td:first-child {
+    padding-left: 16px;
+}
+.w3-table td, .w3-table th, .w3-table-all td, .w3-table-all th {
+    padding: 8px 8px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.w3-table-all tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+</style>
+</head><body><div class = "content"><div class = 'SectionBlock containment'><h1 class = "S1"><span class = "S2"><span class="S0">color</span></span></h1><div class = "S3"><span class = "S2"><span class="S0">Converts </span></span><span class = "S2"><span class="S4">color name</span></span><span class = "S2"><span class="S0"> or </span></span><span class = "S2"><span class="S4">hexadecimal color code</span></span><span class = "S2"><span class="S0"> to an </span></span><span class = "S2"><span class="S4">rgb</span></span><span class = "S2"><span class="S0"> </span></span><span class = "S2"><span class="S4">triplet</span></span><span class = "S2"><span class="S0">.</span></span></div><div class = "S3"><span class = "S2"><span class="S0">An </span></span><span class = "S2"><span class="S4">rgb</span></span><span class = "S2"><span class="S0"> </span></span><span class = "S2"><span class="S4">triplet</span></span><span class = "S2"><span class="S0"> is a three-element row vector whose elements specify the</span></span><span class = "S2"><span class="S0"> intensities of the red, green, and blue components of the color. The intensities are in the range [0,1]; for example, [0.4 0.6 0.7].</span></span><span class = "S2"><span class="S0"> </span></span></div><div class = "S3"><span class = "S2"><span class="S0">A </span></span><span class = "S2"><span class="S4">hexadecimal color code</span></span><span class = "S2"><span class="S0"> is a character vector or a string scalar that</span></span><span class = "S2"><span class="S0"> starts with a hash symbol (#) followed by three or six hexadecimal</span></span><span class = "S2"><span class="S0"> digits, which can range from 0 to F. The values are not case sensitive.</span></span><span class = "S2"><span class="S0"> Thus, the color codes '#FF8800', '#ff8800', '#F80', and '#f80' are</span></span><span class = "S2"><span class="S0"> equivalent.</span></span></div></div><div class = "S0"></div><div class = 'SectionBlock containment active'><h2 class = "S5"><span class = "S2"><span class="S0">Syntax</span></span></h2><div class = "S3"><span class = "S2"><span class="S6">color</span></span></div><div class = "S3"><span class = "S2"><span class="S6">rgb = color(name)</span></span></div><div class = "S3"><span class = "S2"><span class="S6">rgb = color(hex)</span></span></div></div><div class = "S0"></div><div class = 'SectionBlock containment'><h2 class = "S5"><span class = "S2"><span class="S0">Description</span></span></h2><div class = "S3"><span class = "S2"><span class="S6">color</span></span><span class = "S2"><span class="S0">  opens color picker.</span></span></div><div class = "S3"><span class = "S2"><span class="S6">rgb = color(name)</span></span><span class = "S2"><span class="S0"> converts color name to an rgb triplet.</span></span></div><div class = "S3"><span class = "S2"><span class="S6">rgb = color(hex)</span></span><span class = "S2"><span class="S0"> converts hexadecimal color code to an rgb triplet.</span></span></div></div><div class = "S0"></div><div class = 'SectionBlock containment'><h2 class = "S5"><span class = "S2"><span class="S0">Examples</span></span></h2><div class = 'CodeBlock contiguous'><div class = 'inlineWrapper'><div class = "S8 lineNode"><span class = "S9"><span class="S0">figure(</span><span class="S10">'Color'</span><span class="S0">, color(</span><span class="S10">'ghost'</span><span class="S0">)); </span></span></div></div><div class = 'inlineWrapper'><div class = "S8 lineNode"><span class = "S9"><span class="S0">fplot(@(x) sin(x), </span><span class="S10">'Color'</span><span class="S0">, color(</span><span class="S10">'royal'</span><span class="S0">), </span><span class="S10">'LineWidth'</span><span class="S0">, 7);</span></span></div></div><div class = 'inlineWrapper'><div class = "S8 lineNode"><span class = "S9"><span class="S0">hold(</span><span class="S10">'on'</span><span class="S0">); </span></span></div></div><div class = 'inlineWrapper'><div class = "S8 lineNode"><span class = "S9"><span class="S0">fplot(0, </span><span class="S10">'Color'</span><span class="S0">, color(</span><span class="S10">'fire'</span><span class="S0">), </span><span class="S10">'LineWidth'</span><span class="S0">, 3, </span><span class="S10">'LineStyle'</span><span class="S0">, </span><span class="S10">'--'</span><span class="S0">);</span></span></div></div><div class = 'inlineWrapper'><div class = "S8 lineNode"><span class = "S9"><span class="S0">hold(</span><span class="S10">'off'</span><span class="S0">);</span></span></div></div><div class = 'inlineWrapper'><div class = "S8 lineNode"><span class = "S9"><span class="S0">axis(</span><span class="S10">'off'</span><span class="S0">); </span></span></div></div><div class = 'inlineWrapper outputs'><div class = "S8 lineNode"><span class = "S9"><span class="S0">title(</span><span class="S10">'Sin(x)'</span><span class="S0">, </span><span class="S10">'Color'</span><span class="S0">, color(</span><span class="S10">'golden'</span><span class="S0">), </span><span class="S10">'FontSize'</span><span class="S0">, 20);</span></span></div><div class="outputParagraph" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 14px;"><div class="inlineElement eoOutputWrapper embeddedOutputsFigure" uid="B00C2486" data-testid="output_0" style="width: 551px; white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><div class="figureElement" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"><img class="figureImage figureContainingNode" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjAAAAGkCAYAAAAv7h+nAAAgAElEQVR4AezBDbBc53nY9z8OltglF+IlFyRXoiTI8ruy4o+7kR3dNWX5o7bvBnRG449wXBcDtuLUaeTJqc/WiCds05Hdmq0TxjXSc5zXY0+rDKXiBhN/xFWjsXC5qN107KGykCP5XNmWrfOGFmlBWppY8JJY8FlwiadG7ZtcwwD3APcCuB/P7xeJqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiKqIqoiqiK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XysMHLLU52P+He/erjhkBhF5Uu/ervi///t/cHWxIoldbISBQ5b6fMy/46cfvieJPUTk+ISBw7u3K3764XuuLlaEgYONMHC4uljxMf+O68tTwsDh0BlE5Fm8e7viYx7y0w/f8zH/jquLFVnqk6U+WeqTpT7Xl6d8zL/jpx++5/rylCT2EBEJA4d3b1f89MP3/PTD91xfnnJ1sSJLfbLUJ0t9stTn+vKUj/l3/PTD97x7uyIMHI6FQUSeVRg4JLHHu7crri9Pub485frylOvLU7LUJ4k9RET+SBg4ZKnPu7crri9Pub485frylOvLU7LUJ4k9jpFBREREZGEMIiIiIgtjEBEREVkYg4iIiMjCGEREREQWxiAiIiKyMAYRERGRhTGIiIiILIxBREREZGEMIiIiIgtjEBEREVkYg4iIiMjCGEREREQWxiAiIiKyMAYRERGRhTGIiIiILIxBREREZGEMIiIiIgtjEBEREVkYg4iIiMjCGEREREQWxiAiIiKyMAYRERGRhTGIiIiILIxBREREZGEMIiIiIgtjEBEREVkYg4iIiMjCGEREREQWxiAiIiKyMAYRERGRhTGIiIiILIxBREREZGEMIiIiIgtjEBEREVkYg4iIiMjCGEREREQWxiAiIiKyMAYRERGRhTGIiIiILMz/B8FVb9gVlTbmAAAAAElFTkSuQmCC" style="white-space: normal; font-style: normal; color: rgb(64, 64, 64); font-size: 12px;"></div></div></div></div></div></div><div class = "S0"></div><div class = 'SectionBlock containment'><h2 class = "S5"><span class = "S2"><span class="S0">References</span></span></h2><div class = "S3"><a href = "https://www.w3schools.com/colors/colors_names.asp"><span class = "S0"><span class="S13">https://www.w3schools.com/colors/colors_names.asp</span></span></a>
+<table class="w3-table-all notranslate">
+<tbody><tr>
+<th style="width:25%">Color Name</th>
+<th style="width:15%">HEX</th>
+<th style="width:43%">Color</th>
+
+
+</tr>
+
+<tr>
+<td>Black&nbsp;</td>
+<td>#000000</td>
+<td style="background-color:#000000">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Navy&nbsp;</td>
+<td>#000080</td>
+<td style="background-color:#000080">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkBlue&nbsp;</td>
+<td>#00008B</td>
+<td style="background-color:#00008B">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>MediumBlue&nbsp;</td>
+<td>#0000CD</td>
+<td style="background-color:#0000CD">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Blue&nbsp;</td>
+<td>#0000FF</td>
+<td style="background-color:#0000FF">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkGreen&nbsp;</td>
+<td>#006400</td>
+<td style="background-color:#006400">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Green&nbsp;</td>
+<td>#008000</td>
+<td style="background-color:#008000">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Teal&nbsp;</td>
+<td>#008080</td>
+<td style="background-color:#008080">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkCyan&nbsp;</td>
+<td>#008B8B</td>
+<td style="background-color:#008B8B">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DeepSkyBlue&nbsp;</td>
+<td>#00BFFF</td>
+<td style="background-color:#00BFFF">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkTurquoise&nbsp;</td>
+<td>#00CED1</td>
+<td style="background-color:#00CED1">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>MediumSpringGreen&nbsp;</td>
+<td>#00FA9A</td>
+<td style="background-color:#00FA9A">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Lime&nbsp;</td>
+<td>#00FF00</td>
+<td style="background-color:#00FF00">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>SpringGreen&nbsp;</td>
+<td>#00FF7F</td>
+<td style="background-color:#00FF7F">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Aqua&nbsp;</td>
+<td>#00FFFF</td>
+<td style="background-color:#00FFFF">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Cyan&nbsp;</td>
+<td>#00FFFF</td>
+<td style="background-color:#00FFFF">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>MidnightBlue&nbsp;</td>
+<td>#191970</td>
+<td style="background-color:#191970">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DodgerBlue&nbsp;</td>
+<td>#1E90FF</td>
+<td style="background-color:#1E90FF">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LightSeaGreen&nbsp;</td>
+<td>#20B2AA</td>
+<td style="background-color:#20B2AA">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>ForestGreen&nbsp;</td>
+<td>#228B22</td>
+<td style="background-color:#228B22">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>SeaGreen&nbsp;</td>
+<td>#2E8B57</td>
+<td style="background-color:#2E8B57">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkSlateGray&nbsp;</td>
+<td>#2F4F4F</td>
+<td style="background-color:#2F4F4F">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkSlateGrey&nbsp;</td>
+<td>#2F4F4F</td>
+<td style="background-color:#2F4F4F">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LimeGreen&nbsp;</td>
+<td>#32CD32</td>
+<td style="background-color:#32CD32">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>MediumSeaGreen&nbsp;</td>
+<td>#3CB371</td>
+<td style="background-color:#3CB371">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Turquoise&nbsp;</td>
+<td>#40E0D0</td>
+<td style="background-color:#40E0D0">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>RoyalBlue&nbsp;</td>
+<td>#4169E1</td>
+<td style="background-color:#4169E1">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>SteelBlue&nbsp;</td>
+<td>#4682B4</td>
+<td style="background-color:#4682B4">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkSlateBlue&nbsp;</td>
+<td>#483D8B</td>
+<td style="background-color:#483D8B">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>MediumTurquoise&nbsp;</td>
+<td>#48D1CC</td>
+<td style="background-color:#48D1CC">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Indigo &nbsp;</td>
+<td>#4B0082</td>
+<td style="background-color:#4B0082">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkOliveGreen&nbsp;</td>
+<td>#556B2F</td>
+<td style="background-color:#556B2F">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>CadetBlue&nbsp;</td>
+<td>#5F9EA0</td>
+<td style="background-color:#5F9EA0">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>CornflowerBlue&nbsp;</td>
+<td>#6495ED</td>
+<td style="background-color:#6495ED">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>RebeccaPurple&nbsp;</td>
+<td>#663399</td>
+<td style="background-color:#663399">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>MediumAquaMarine&nbsp;</td>
+<td>#66CDAA</td>
+<td style="background-color:#66CDAA">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DimGray&nbsp;</td>
+<td>#696969</td>
+<td style="background-color:#696969">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DimGrey&nbsp;</td>
+<td>#696969</td>
+<td style="background-color:#696969">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>SlateBlue&nbsp;</td>
+<td>#6A5ACD</td>
+<td style="background-color:#6A5ACD">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>OliveDrab&nbsp;</td>
+<td>#6B8E23</td>
+<td style="background-color:#6B8E23">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>SlateGray&nbsp;</td>
+<td>#708090</td>
+<td style="background-color:#708090">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>SlateGrey&nbsp;</td>
+<td>#708090</td>
+<td style="background-color:#708090">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LightSlateGray&nbsp;</td>
+<td>#778899</td>
+<td style="background-color:#778899">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LightSlateGrey&nbsp;</td>
+<td>#778899</td>
+<td style="background-color:#778899">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>MediumSlateBlue&nbsp;</td>
+<td>#7B68EE</td>
+<td style="background-color:#7B68EE">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LawnGreen&nbsp;</td>
+<td>#7CFC00</td>
+<td style="background-color:#7CFC00">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Chartreuse&nbsp;</td>
+<td>#7FFF00</td>
+<td style="background-color:#7FFF00">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Aquamarine&nbsp;</td>
+<td>#7FFFD4</td>
+<td style="background-color:#7FFFD4">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Maroon&nbsp;</td>
+<td>#800000</td>
+<td style="background-color:#800000">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Purple&nbsp;</td>
+<td>#800080</td>
+<td style="background-color:#800080">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Olive&nbsp;</td>
+<td>#808000</td>
+<td style="background-color:#808000">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Gray&nbsp;</td>
+<td>#808080</td>
+<td style="background-color:#808080">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Grey&nbsp;</td>
+<td>#808080</td>
+<td style="background-color:#808080">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>SkyBlue&nbsp;</td>
+<td>#87CEEB</td>
+<td style="background-color:#87CEEB">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LightSkyBlue&nbsp;</td>
+<td>#87CEFA</td>
+<td style="background-color:#87CEFA">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>BlueViolet&nbsp;</td>
+<td>#8A2BE2</td>
+<td style="background-color:#8A2BE2">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkRed&nbsp;</td>
+<td>#8B0000</td>
+<td style="background-color:#8B0000">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkMagenta&nbsp;</td>
+<td>#8B008B</td>
+<td style="background-color:#8B008B">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>SaddleBrown&nbsp;</td>
+<td>#8B4513</td>
+<td style="background-color:#8B4513">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkSeaGreen&nbsp;</td>
+<td>#8FBC8F</td>
+<td style="background-color:#8FBC8F">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LightGreen&nbsp;</td>
+<td>#90EE90</td>
+<td style="background-color:#90EE90">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>MediumPurple&nbsp;</td>
+<td>#9370DB</td>
+<td style="background-color:#9370DB">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkViolet&nbsp;</td>
+<td>#9400D3</td>
+<td style="background-color:#9400D3">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>PaleGreen&nbsp;</td>
+<td>#98FB98</td>
+<td style="background-color:#98FB98">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkOrchid&nbsp;</td>
+<td>#9932CC</td>
+<td style="background-color:#9932CC">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>YellowGreen&nbsp;</td>
+<td>#9ACD32</td>
+<td style="background-color:#9ACD32">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Sienna&nbsp;</td>
+<td>#A0522D</td>
+<td style="background-color:#A0522D">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Brown&nbsp;</td>
+<td>#A52A2A</td>
+<td style="background-color:#A52A2A">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkGray&nbsp;</td>
+<td>#A9A9A9</td>
+<td style="background-color:#A9A9A9">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkGrey&nbsp;</td>
+<td>#A9A9A9</td>
+<td style="background-color:#A9A9A9">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LightBlue&nbsp;</td>
+<td>#ADD8E6</td>
+<td style="background-color:#ADD8E6">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>GreenYellow&nbsp;</td>
+<td>#ADFF2F</td>
+<td style="background-color:#ADFF2F">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>PaleTurquoise&nbsp;</td>
+<td>#AFEEEE</td>
+<td style="background-color:#AFEEEE">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LightSteelBlue&nbsp;</td>
+<td>#B0C4DE</td>
+<td style="background-color:#B0C4DE">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>PowderBlue&nbsp;</td>
+<td>#B0E0E6</td>
+<td style="background-color:#B0E0E6">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>FireBrick&nbsp;</td>
+<td>#B22222</td>
+<td style="background-color:#B22222">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkGoldenRod&nbsp;</td>
+<td>#B8860B</td>
+<td style="background-color:#B8860B">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>MediumOrchid&nbsp;</td>
+<td>#BA55D3</td>
+<td style="background-color:#BA55D3">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>RosyBrown&nbsp;</td>
+<td>#BC8F8F</td>
+<td style="background-color:#BC8F8F">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkKhaki&nbsp;</td>
+<td>#BDB76B</td>
+<td style="background-color:#BDB76B">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Silver&nbsp;</td>
+<td>#C0C0C0</td>
+<td style="background-color:#C0C0C0">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>MediumVioletRed&nbsp;</td>
+<td>#C71585</td>
+<td style="background-color:#C71585">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>IndianRed &nbsp;</td>
+<td>#CD5C5C</td>
+<td style="background-color:#CD5C5C">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Peru&nbsp;</td>
+<td>#CD853F</td>
+<td style="background-color:#CD853F">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Chocolate&nbsp;</td>
+<td>#D2691E</td>
+<td style="background-color:#D2691E">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Tan&nbsp;</td>
+<td>#D2B48C</td>
+<td style="background-color:#D2B48C">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LightGray&nbsp;</td>
+<td>#D3D3D3</td>
+<td style="background-color:#D3D3D3">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LightGrey&nbsp;</td>
+<td>#D3D3D3</td>
+<td style="background-color:#D3D3D3">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Thistle&nbsp;</td>
+<td>#D8BFD8</td>
+<td style="background-color:#D8BFD8">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Orchid&nbsp;</td>
+<td>#DA70D6</td>
+<td style="background-color:#DA70D6">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>GoldenRod&nbsp;</td>
+<td>#DAA520</td>
+<td style="background-color:#DAA520">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>PaleVioletRed&nbsp;</td>
+<td>#DB7093</td>
+<td style="background-color:#DB7093">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Crimson&nbsp;</td>
+<td>#DC143C</td>
+<td style="background-color:#DC143C">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Gainsboro&nbsp;</td>
+<td>#DCDCDC</td>
+<td style="background-color:#DCDCDC">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Plum&nbsp;</td>
+<td>#DDA0DD</td>
+<td style="background-color:#DDA0DD">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>BurlyWood&nbsp;</td>
+<td>#DEB887</td>
+<td style="background-color:#DEB887">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LightCyan&nbsp;</td>
+<td>#E0FFFF</td>
+<td style="background-color:#E0FFFF">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Lavender&nbsp;</td>
+<td>#E6E6FA</td>
+<td style="background-color:#E6E6FA">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkSalmon&nbsp;</td>
+<td>#E9967A</td>
+<td style="background-color:#E9967A">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Violet&nbsp;</td>
+<td>#EE82EE</td>
+<td style="background-color:#EE82EE">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>PaleGoldenRod&nbsp;</td>
+<td>#EEE8AA</td>
+<td style="background-color:#EEE8AA">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LightCoral&nbsp;</td>
+<td>#F08080</td>
+<td style="background-color:#F08080">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Khaki&nbsp;</td>
+<td>#F0E68C</td>
+<td style="background-color:#F0E68C">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>AliceBlue&nbsp;</td>
+<td>#F0F8FF</td>
+<td style="background-color:#F0F8FF">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>HoneyDew&nbsp;</td>
+<td>#F0FFF0</td>
+<td style="background-color:#F0FFF0">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Azure&nbsp;</td>
+<td>#F0FFFF</td>
+<td style="background-color:#F0FFFF">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>SandyBrown&nbsp;</td>
+<td>#F4A460</td>
+<td style="background-color:#F4A460">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Wheat&nbsp;</td>
+<td>#F5DEB3</td>
+<td style="background-color:#F5DEB3">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Beige&nbsp;</td>
+<td>#F5F5DC</td>
+<td style="background-color:#F5F5DC">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>WhiteSmoke&nbsp;</td>
+<td>#F5F5F5</td>
+<td style="background-color:#F5F5F5">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>MintCream&nbsp;</td>
+<td>#F5FFFA</td>
+<td style="background-color:#F5FFFA">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>GhostWhite&nbsp;</td>
+<td>#F8F8FF</td>
+<td style="background-color:#F8F8FF">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Salmon&nbsp;</td>
+<td>#FA8072</td>
+<td style="background-color:#FA8072">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>AntiqueWhite&nbsp;</td>
+<td>#FAEBD7</td>
+<td style="background-color:#FAEBD7">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Linen&nbsp;</td>
+<td>#FAF0E6</td>
+<td style="background-color:#FAF0E6">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LightGoldenRodYellow&nbsp;</td>
+<td>#FAFAD2</td>
+<td style="background-color:#FAFAD2">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>OldLace&nbsp;</td>
+<td>#FDF5E6</td>
+<td style="background-color:#FDF5E6">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Red&nbsp;</td>
+<td>#FF0000</td>
+<td style="background-color:#FF0000">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Fuchsia&nbsp;</td>
+<td>#FF00FF</td>
+<td style="background-color:#FF00FF">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Magenta&nbsp;</td>
+<td>#FF00FF</td>
+<td style="background-color:#FF00FF">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DeepPink&nbsp;</td>
+<td>#FF1493</td>
+<td style="background-color:#FF1493">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>OrangeRed&nbsp;</td>
+<td>#FF4500</td>
+<td style="background-color:#FF4500">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Tomato&nbsp;</td>
+<td>#FF6347</td>
+<td style="background-color:#FF6347">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>HotPink&nbsp;</td>
+<td>#FF69B4</td>
+<td style="background-color:#FF69B4">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Coral&nbsp;</td>
+<td>#FF7F50</td>
+<td style="background-color:#FF7F50">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>DarkOrange&nbsp;</td>
+<td>#FF8C00</td>
+<td style="background-color:#FF8C00">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LightSalmon&nbsp;</td>
+<td>#FFA07A</td>
+<td style="background-color:#FFA07A">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Orange&nbsp;</td>
+<td>#FFA500</td>
+<td style="background-color:#FFA500">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LightPink&nbsp;</td>
+<td>#FFB6C1</td>
+<td style="background-color:#FFB6C1">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Pink&nbsp;</td>
+<td>#FFC0CB</td>
+<td style="background-color:#FFC0CB">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Gold&nbsp;</td>
+<td>#FFD700</td>
+<td style="background-color:#FFD700">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>PeachPuff&nbsp;</td>
+<td>#FFDAB9</td>
+<td style="background-color:#FFDAB9">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>NavajoWhite&nbsp;</td>
+<td>#FFDEAD</td>
+<td style="background-color:#FFDEAD">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Moccasin&nbsp;</td>
+<td>#FFE4B5</td>
+<td style="background-color:#FFE4B5">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Bisque&nbsp;</td>
+<td>#FFE4C4</td>
+<td style="background-color:#FFE4C4">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>MistyRose&nbsp;</td>
+<td>#FFE4E1</td>
+<td style="background-color:#FFE4E1">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>BlanchedAlmond&nbsp;</td>
+<td>#FFEBCD</td>
+<td style="background-color:#FFEBCD">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>PapayaWhip&nbsp;</td>
+<td>#FFEFD5</td>
+<td style="background-color:#FFEFD5">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LavenderBlush&nbsp;</td>
+<td>#FFF0F5</td>
+<td style="background-color:#FFF0F5">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>SeaShell&nbsp;</td>
+<td>#FFF5EE</td>
+<td style="background-color:#FFF5EE">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Cornsilk&nbsp;</td>
+<td>#FFF8DC</td>
+<td style="background-color:#FFF8DC">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LemonChiffon&nbsp;</td>
+<td>#FFFACD</td>
+<td style="background-color:#FFFACD">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>FloralWhite&nbsp;</td>
+<td>#FFFAF0</td>
+<td style="background-color:#FFFAF0">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Snow&nbsp;</td>
+<td>#FFFAFA</td>
+<td style="background-color:#FFFAFA">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Yellow&nbsp;</td>
+<td>#FFFF00</td>
+<td style="background-color:#FFFF00">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>LightYellow&nbsp;</td>
+<td>#FFFFE0</td>
+<td style="background-color:#FFFFE0">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>Ivory&nbsp;</td>
+<td>#FFFFF0</td>
+<td style="background-color:#FFFFF0">&nbsp;</td>
+
+
+</tr>
+
+<tr>
+<td>White&nbsp;</td>
+<td>#FFFFFF</td>
+<td style="background-color:#FFFFFF">&nbsp;</td>
+
+
+</tr>
+
+</tbody></table>
+</div></div></div><br><!-- <br>##### SOURCE BEGIN #####<br>%% color<br>% Converts *color name* or *hexadecimal color code* to an *rgb* *triplet*.<br>% <br>% An *rgb* *triplet* is a three-element row vector whose elements specify <br>% the intensities of the red, green, and blue components of the color. The intensities <br>% are in the range [0,1]; for example, [0.4 0.6 0.7]. <br>% <br>% A *hexadecimal color code* is a character vector or a string scalar that <br>% starts with a hash symbol (#) followed by three or six hexadecimal digits, which <br>% can range from 0 to F. The values are not case sensitive. Thus, the color codes <br>% '#FF8800', '#ff8800', '#F80', and '#f80' are equivalent.<br>%% Syntax<br>% |color|<br>% <br>% |rgb = color(name)|<br>% <br>% |rgb = color(hex)|<br>%% Description<br>% |color|  shows color picker.<br>% <br>% |rgb = color(name)| converts color name to an rgb triplet.<br>% <br>% |rgb = color(hex)| converts hexadecimal color code to an rgb triplet.<br>%% Examples<br>%%<br>figure('Color', color('ghost')); <br>fplot(@(x) sin(x), 'Color', color('royal'), 'LineWidth', 7);<br>hold('on'); <br>fplot(0, 'Color', color('fire'), 'LineWidth', 3, 'LineStyle', 'REPLACE_WITH_DASH_DASH');<br>hold('off');<br>axis('off'); <br>title('Sin(x)', 'Color', color('golden'), 'FontSize', 20);<br>%% References<br>% <https://www.w3schools.com/colors/colors_names.asp https://www.w3schools.com/colors/colors_names.asp><br>##### SOURCE END #####<br>--></body></html>

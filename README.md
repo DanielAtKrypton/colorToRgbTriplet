@@ -47,5 +47,5 @@ title('Sin(x)', 'Color', color('golden'), 'FontSize', 20);
 
 ## References
 
-- [w3schools.com/colors/colors_names.](w3schools.com/colors/colors_names.asp)
+- [w3schools.com/colors/colors_names.asp](https://www.w3schools.com/colors/colors_names.asp)
 - [w3schools.com/colors/colors_picker.asp](https://www.w3schools.com/colors/colors_picker.asp)
